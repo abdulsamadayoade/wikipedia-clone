@@ -1,0 +1,280 @@
+/*-------------------------- FONTS ---------------------------*/
+@font-face {
+  font-family: 'Lightcaseeead';
+  src: url("../../fonts/lightcaseeead.ttf") format("truetype");
+}
+
+/*-------------------------- VARIABLES ---------------------------*/
+/*-------------------------- PRESETS ---------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 54%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 51%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Lightcaseeead", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-lg {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.07);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+}
+
+header .nav__logo img {
+  height: 4rem;
+  width: 6rem;
+  margin-left: 3rem;
+}
+
+header .nav__search {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .nav__search--input {
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: inherit;
+  background-color: #F4F2F2;
+  border: none;
+  padding: .7rem 2rem;
+  border-radius: 100px;
+  width: 90%;
+  transition: all .2s;
+  margin-right: -3.25rem;
+}
+
+header .nav__search--input:focus {
+  background-color: #F0EEEE;
+  width: 100%;
+  outline: none;
+}
+
+header .nav__search--input:focus + header .nav__search--button {
+  background-color: #F0EEEE;
+}
+
+header .nav__search--button {
+  border: none;
+  background-color: #F4F2F2;
+}
+
+header .nav__search--button:focus {
+  outline: none;
+}
+
+header .nav__search--button:active {
+  transform: translateY(2px);
+}
+
+header .nav__search--icon {
+  height: 2rem;
+  width: 2rem;
+  fill: #999;
+}
+
+.sidebar {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100vh;
+  max-width: 25rem;
+  position: fixed;
+  top: 7rem;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar h4 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-bottom: .2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #6C9BD9;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.sidebar a {
+  color: #3c68eb;
+}
+
+.sidebar li {
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin-bottom: 2.2rem;
+}
+
+.sidebar .article li {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar .content {
+  margin-top: 6rem;
+}
+
+.sidebar .content h4 {
+  border-bottom: none;
+}
+
+main {
+  position: absolute;
+  top: 7rem;
+  left: 25rem;
+  display: flex;
+}
+
+main .main-content {
+  flex: 1;
+  padding: 6rem;
+}
+
+main .main-content h1 {
+  margin-bottom: 3.2rem;
+}
+
+main .main-content h2 {
+  font-size: 1.8rem;
+  margin: 3.5rem 0 1.5rem;
+}
+
+main .main-content h3 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+main .main-content p {
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+main .side-content {
+  flex-basis: 28%;
+  border-left: 1px solid #CCC;
+  font-size: 1.35rem;
+}
+
+main .side-content .buhari-details {
+  padding: 2rem 1rem;
+}
+
+main .side-content .flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+  margin-top: 1rem;
+}
+
+main .buhari-photo {
+  background-image: url("../../images/Buhari.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 40rem;
+}
+
+main .profile-overview {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  main .side-content {
+    display: none;
+  }
+  main .profile-overview {
+    display: block;
+    font-size: 1.4rem;
+    width: 100%;
+    max-width: 34rem;
+    margin: 0 auto 3rem;
+  }
+  main .profile-overview .buhari-details {
+    padding: 2rem 1rem;
+  }
+  main .profile-overview .flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  main {
+    left: 0;
+  }
+  main .main-content {
+    padding: 4rem;
+  }
+}

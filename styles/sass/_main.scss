@@ -1,0 +1,60 @@
+main {
+    position: absolute;
+    top: 7rem;
+    left: 25rem;
+    display: flex;
+
+    .main-content {
+        flex: 1;
+        padding: 6rem;
+
+        h1 {
+            margin-bottom: 3.2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 3.5rem 0 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        p {
+            margin-bottom: 2.5rem;
+            font-size: 1.4rem;
+            line-height: 1.7;
+        }
+    }
+
+    .side-content {
+        flex-basis: 28%;
+        border-left: 1px solid $color-8;
+        font-size: 1.35rem;
+
+        .buhari-details {
+            padding: 2rem 1rem;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2.4rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .buhari-photo {
+        background-image: url('../../images/Buhari.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 40rem;
+    }
+
+    .profile-overview {
+        display: none;
+    }
+}
