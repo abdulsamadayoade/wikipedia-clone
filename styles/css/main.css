@@ -216,6 +216,10 @@ main .main-content p {
   line-height: 1.7;
 }
 
+main .main-content .content-table {
+  display: none;
+}
+
 main .side-content {
   flex-basis: 28%;
   border-left: 1px solid #CCC;
@@ -246,18 +250,41 @@ main .profile-overview {
 }
 
 @media screen and (max-width: 900px) {
+  main .main-content p {
+    font-size: 1.6rem;
+  }
+  main .main-content .content-table {
+    display: block;
+    border: 1px solid #F2F2F2;
+    margin-bottom: 3rem;
+    padding: 3rem;
+  }
+  main .main-content .content-table h4 {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  main .main-content .content-table ul {
+    margin: 2rem 0;
+  }
+  main .main-content .content-table li {
+    margin-top: 1.5rem;
+  }
+  main .main-content .content-table a {
+    color: #3c68eb;
+  }
   main .side-content {
     display: none;
   }
   main .profile-overview {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     width: 100%;
     max-width: 34rem;
     margin: 0 auto 3rem;
   }
   main .profile-overview .buhari-details {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
   main .profile-overview .flex {
     display: flex;
